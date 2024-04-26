@@ -3,99 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #f2f2f2; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-<div class="container" style="background-color: white; padding: 20px; width: 500px; height: 650px; max-width: 80%;">
-    <div class="row">
-        <div class="col-md-8">
-            <h2>Calculator</h2>
-        </div>
-        <div class="col-md-4">
-            <button type="button" class="btn btn-default btn-block" disabled style="background-color: #EBEBEB; margin-top: 18px; color: #000000; border-color: #000000;">Clear</button>
-        </div>
+<body>
+
+<div class="container">
+    <h1>Calculator</h1>
+
+    <div class="display">
+        <p id="operation"></p>
+        <p id="result"></p>
     </div>
-    <div class="jumbotron" style="background-color: #FFECD7; padding: 20px; display: flex; text-align: center; align-items: center;">
-        <p id="operation" style="font-size: 16px; font-weight: bold;"></p>
-        <p id="result" style="font-size: 16px; font-weight: bold;"></p>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <span style="font-weight: bold; float: left; margin-right: 10px;">Input A</span>
-            <form action="/add" method="post"> <input type="number" style="border-color: #000000;" class="form-control" name="inputA" placeholder="0">
+
+    <button type="button" class="btn btn-clear">Clear</button>
+    <div class="input-fields">
+        <div class="input-group">
+            <label for="inputA">Input A</label>
+            <form action="/calculate" method="post">
+                <input type="text" id="inputA" name="inputA" value="0">
             </form>
         </div>
-        <div class="col-md-6">
-            <span style="font-weight: bold; float: left; margin-right: 10px;">Input B</span>
-            <form action="/add" method="post"> <input type="number" style="border-color: #000000;" class="form-control" name="inputA" placeholder="0">
+        <div class="input-group">
+            <label for="inputB">Input B</label>
+            <form action="/calculate" method="post">
+                <input type="text" id="inputB" name="inputB" value="0">
             </form>
         </div>
     </div>
-    <form action="/add" method="post">
-        <div class="row" style="margin-top: 10px;">
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">A + B</button>
-            </div>
-        </div>
-    </form>
-    <div class="row" style="margin-top: 10px;">
-        <div class="col-md-6" style="background-color: #EBEBEB; text-align: center; padding: 5px; font-weight: bold; width: 215px; margin: 0 11px; border-color: #000000;">A only</div>
+
+    <div class="grey-boxes"> <div class="grey-box"><h3>A and B</h3></div>
+        <div class="grey-box"><h3>A only</h3></div>
     </div>
-    <div class="row" style="margin-top: 10px;">
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">A + B</button>
+
+    <div class="button-grid">
+        <div>  <button type="submit" form="formA" class="btn">A + B</button>
+            <button type="submit" form="formA" class="btn">A - B</button>
+            <button type="submit" form="formA" class="btn">A * B</button>
+            <button type="submit" form="formA" class="btn">A / B</button>
+            <button type="submit" form="formA" class="btn">A == B</button>
+            <button type="submit" form="formA" class="btn">A ^ B</button>
+            <button type="submit" form="formA" class="btn">A log B</button>
+            <button type="submit" form="formA" class="btn">A root B</button>
         </div>
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">A !</button>
-        </div>
-    </div>
-    <div class="row" style="margin-top: 10px;">
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">A - B</button>
-        </div>
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">sin A</button>
-        </div>
-    </div>
-    <div class="row" style="margin-top: 10px;">
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">A * B</button>
-        </div>
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">cos A</button>
-        </div>
-    </div>
-    <div class="row" style="margin-top: 10px;">
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">A / B</button>
-        </div>
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">tan A</button>
-        </div>
-    </div>
-    <div class="row" style="margin-top: 10px;">
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">A == B</button>
-        </div>
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">1 / A</button>
-        </div>
-    </div>
-    <div class="row" style="margin-top: 10px;">
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">A ^ B</button>
-        </div>
-    </div>
-    <div class="row" style="margin-top: 10px;">
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">A log B</button>
-        </div>
-    </div>
-    <div class="row" style="margin-top: 10px;">
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-block" style="background-color: #EBEBEB; width: 100%; color: #000000; border-color: #000000;">A root B</button>
+        <div>  <button type="submit" form="formB" class="btn">A !</button>
+            <button type="submit" form="formB" class="btn">sin A</button>
+            <button type="submit" form="formB" class="btn">cos A</button>
+            <button type="submit" form="formB" class="btn">tan A</button>
+            <button type="submit" form="formB" class="btn">1 / A</button>
         </div>
     </div>
 </div>
 </body>
 </html>
+
+
