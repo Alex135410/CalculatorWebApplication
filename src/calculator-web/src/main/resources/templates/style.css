@@ -1,0 +1,116 @@
+body {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    width: 500px;
+    max-width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h1 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.display {
+    background-color: #FFECD7;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.display p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.input-fields {
+    display: flex;
+    margin-top: 20px;
+}
+
+.input-fields label {
+    display: block;
+    width: 80px;
+    text-align: left;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.input-fields input {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+    width: 220px
+}
+
+.input-fields input:last-child {
+    margin-right: 5px;
+}
+
+.grey-boxes {
+    display: flex; /* Allow flexbox for side-by-side layout */
+    margin-top: 20px; /* Add spacing after input fields */
+    margin-bottom: 20px; /* Add spacing before buttons */
+}
+
+.grey-box {
+    background-color: #ddd; /* Set gray background color */
+    width: 230px;
+    padding: 10px; /* Add padding for content */
+    border-radius: 3px; /* Add rounded corners */
+    margin-right: 10px; /* Add spacing between boxes */
+    text-align: center; /* Center text content */
+}
+
+.grey-box:last-child {
+    margin-right: 0 /* Remove margin from the last box */
+}
+
+h3 {
+    margin: 0; /* Remove default margin from heading */
+}
+
+.button-grid {
+    display: flex;
+}
+
+.btn {
+    background-color: #EBEBEB;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 7px;
+    width: 245px;
+}
+
+.btn-clear {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width:160px
+}
+
+
+.btn:hover {
+    background-color: #ddd;
+}
