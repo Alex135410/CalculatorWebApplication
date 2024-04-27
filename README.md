@@ -35,7 +35,7 @@ Upon installing all these files above you have sucessfully set up your environme
 # Executing the Web Application
 This below will show you how to run the web application from the terminal command line <br/>
   1. Open terminal application
-  2. Change directory to "cd /Users/alexcastillo/IdeaProjects/SWE3643Project1/src/calculator-web/src/main/java/org/example/calculatorweb/service"
+  2. Change directory to "cd /Users/alexcastillo/IdeaProjects/SWE3643Project1/src/calculator-web/src/main/java/org/example/calculatorweb"
   3. Type in "javac CalculatorWebApplication" to comple the class
   4. Type in "java CalculatorWebApplication" to launch application
 
