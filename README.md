@@ -17,7 +17,7 @@ Alex Castillo <br/>
 Joel Roche 
 
 # Architecture
-This Architecture of this project is set up using a combination of packages and classes. Packages include: Calculator Engine, Calculator Engine Unit Test, Calculator Web Server App, and Calculator End-To-End Test. Classes include: CalculatorEngine, CalculatorTest, CalculatorEndToEndTest, Models, Views, and Controllers. The relationship betweens these are, CalculatorEngineUnitTest interacts with CalculatorEngine for unit testing. Controllers inteact with Models and Views to manage data and user interface elements. Controllers use the CalculatorEngine to preform calculations. Fianlly, CalculatorEndToEndTests interact with Controllers via HTTP calls simulating through a headless browser.
+The architecture of this project is set up using a combination of packages and classes. Packages include: Calculator Engine, Calculator Engine Unit Test, Calculator Web Server App, and Calculator End-To-End Test. Classes include: CalculatorEngine, CalculatorTest, CalculatorEndToEndTest, Models, Views, and Controllers. The relationship between these is, CalculatorEngineUnitTest interacts with CalculatorEngine for unit testing. Controllers interact with Models and Views to manage data and user interface elements. Controllers use the CalculatorEngine to perform calculations. Finally, CalculatorEndToEndTests interact with Controllers via HTTP calls simulating through a headless browser.
 
 ![UMLSoftware](https://github.com/Alex135410/SWE3643Project/assets/129552122/c70b4156-e62a-4dc8-833f-788720f68bfa)
 
@@ -27,19 +27,19 @@ This is a cross-platform application and should work in Windows 10+ and MacOS.<b
 (Note this application has only been tested on MacOS.)<br/>
 To prepare your environment to execute this application:
   1. [Install the latest version of Java](https://www.oracle.com/java/technologies/downloads/#java22) 
-  2. [Install the lastest version of IntelliJ IDEA](https://www.jetbrains.com/idea/download/?section=mac)
-  3. [Clone repostitory from Github](https://github.com/Alex135410/SWE3643Project)<br/>
+  2. [Install the latest version of IntelliJ IDEA](https://www.jetbrains.com/idea/download/?section=mac)
+  3. [Clone repository from Github](https://github.com/Alex135410/SWE3643Project)<br/>
   
-Upon installing all these files above you have sucessfully set up your environment and are ready to run the application on your device. 
+Upon installing all these files above you have successfully set up your environment and are ready to run the application on your device. 
 
 # Executing the Web Application
 This below will show you how to run the web application from the terminal command line <br/>
   1. Open terminal application
   2. Change directory to "cd /Users/alexcastillo/IdeaProjects/SWE3643Project1/src/calculator-web/src/main/java/org/example/calculatorweb"
-  3. Type in "javac CalculatorWebApplication" to comple the class
-  4. Type in "java CalculatorWebApplication" to launch application
+  3. Type in "javac CalculatorWebApplication" to compile the class
+  4. Type in "java CalculatorWebApplication" to launch the application
 
-Doing these steps will insure you can run the web appliation via command line. This is incase the use does not have an IDE to run the program.
+Doing these steps will ensure you can run the web application via the command line. This is in case the user does not have an IDE to run the program.
 
 # Executing Unit Test
 This below will show you how to run the unit test from the terminal command line <br/>
@@ -48,7 +48,7 @@ This below will show you how to run the unit test from the terminal command line
   3. Type in "javac calculatorTest.java" to compile the test
   4. Type in "java calculatorTest" to run the test
 
-Doing all these step will insure you can run the unit test via command line. This is incase the user does not have an IDE to run the program.
+Doing all these steps will ensure you can run the unit test via the command line. This is in case the user does not have an IDE to run the program.
 
 # Reviewing Unit Test Coverage
 Coverage statistics:
@@ -64,8 +64,8 @@ This below will show you how to run the end-to-end test from the terminal comman
   3. Type in "javac CalculatorEngineApplication.java" to compile the test
   4. Type in "java CalculatorEngineApplication" to run the test
 
-Doing all these steps will insure you can run the end-to-end test via command line. This is incase the user does not have an IDE to run the program.
+Doing all these steps will ensure you can run the end-to-end test via the command line. This is in case the user does not have an IDE to run the program.
 
 # Final Video Presentation
-
+https://youtu.be/qjocCV6J2JI
 
