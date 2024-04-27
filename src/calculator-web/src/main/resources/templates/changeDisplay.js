@@ -21,3 +21,23 @@ function updateDisplay() {
     }
 }
 
+const form = document.getElementById('calculatorForm');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Assuming traditional form submission with FormData
+    const formData = new FormData(form);
+
+    fetch('/calculate/add', { // Replace with your actual endpoint
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json()) // Assuming JSON response
+        .then(data => {
+            updateDisplay(); // Call updateDisplay after successful submission
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+        });
+});

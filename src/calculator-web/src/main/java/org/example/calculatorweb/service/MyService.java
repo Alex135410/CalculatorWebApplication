@@ -1,10 +1,13 @@
 package org.example.calculatorweb.service;
 
+import org.example.calculatorengine.calculator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class MyService {
 
+    @Autowired
     private final org.example.calculatorengine.calculator calculator;
 
     public MyService(org.example.calculatorengine.calculator calculator) {

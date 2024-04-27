@@ -1,8 +1,8 @@
 package org.example.calculatorengine;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class calculator {
     public double Add(double input1, double input2) {
         //preq-ENGINE-3
